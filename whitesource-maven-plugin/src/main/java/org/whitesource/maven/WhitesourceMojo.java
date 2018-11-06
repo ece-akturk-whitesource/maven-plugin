@@ -206,7 +206,7 @@ public abstract class WhitesourceMojo extends AbstractMojo {
                 Constants.FAIL_ON_ERROR, String.valueOf(this.failOnError)));
         boolean failOnConnectionError = Boolean.valueOf(session.getSystemProperties().getProperty(
                 Constants.FAIL_ON_CONNECTION_ERROR, String.valueOf(this.failOnConnectionError)));
-        boolean connectionError = error.getMessage().contains(Constants.ERROR_CONNECTION_REFUSED);
+        boolean connectionError = error.getMessage().contains(Constants.ERROR_CONNECTION_REFUSED) || error.getMessage().contains(Constants.COMMUNICATION_ERROR_WITH_SERVER);
 
         if (connectionError && failOnConnectionError) {
             debug(message, error);

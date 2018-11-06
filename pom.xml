@@ -9,7 +9,7 @@
 
     <groupId>org.whitesource</groupId>
     <artifactId>whitesource-maven-parent</artifactId>
-    <version>18.6.3-SNAPSHOT</version>
+    <version>18.10.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
