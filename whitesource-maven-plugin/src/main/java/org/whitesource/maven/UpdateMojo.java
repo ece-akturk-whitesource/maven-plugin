@@ -201,11 +201,13 @@ public class UpdateMojo extends AgentMojo {
 
     private void removeEmptyProjects(Collection<AgentProjectInfo> projectInfos) {
         Collection<AgentProjectInfo> emptyProjects = new ArrayList<AgentProjectInfo>();
-        Iterator<AgentProjectInfo> iterator = projectInfos.iterator();
-        while (iterator.hasNext()) {
-            AgentProjectInfo child = iterator.next();
-            if (child.getDependencies().size() == 0) {
-                emptyProjects.add(child);
+        if(!updateEmptyProject){
+            Iterator<AgentProjectInfo> iterator = projectInfos.iterator();
+            while (iterator.hasNext()) {
+                AgentProjectInfo child = iterator.next();
+                if (child.getDependencies().size() == 0) {
+                    emptyProjects.add(child);
+                }
             }
         }
         projectInfos.removeAll(emptyProjects);

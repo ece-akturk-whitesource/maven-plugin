@@ -65,6 +65,7 @@ public final class Constants {
 	public static final String ORG_TOKEN_FILE = PLUGIN_PREFIX + "orgTokenFile";
     public static final String USER_KEY_FILE = PLUGIN_PREFIX + "userKeyFile";
 	public static final String COMMUNICATION_ERROR_WITH_SERVER = "Error communicating with service";
+	public static final String UPDATE_EMPTY_PROJECT = PLUGIN_PREFIX + "updateEmptyProject";
 	/* --- Messages --- */
 
 	public static final String ATTEMPTING_TO_RECONNECT_MESSAGE = "Attempting to reconnect to WhiteSource";

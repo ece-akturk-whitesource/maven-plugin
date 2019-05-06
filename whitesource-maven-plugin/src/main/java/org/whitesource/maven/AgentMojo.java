@@ -202,6 +202,9 @@ public abstract class AgentMojo extends WhitesourceMojo {
     @Parameter(alias = "userKeyFile", property = Constants.ORG_TOKEN_FILE, required = false)
     protected String userKeyFile;
 
+    @Parameter(alias = "updateEmptyProject", property = Constants.UPDATE_EMPTY_PROJECT, required = false)
+    protected boolean updateEmptyProject;
+
     /* --- Constructors --- */
 
     protected AgentMojo() {
@@ -276,6 +279,8 @@ public abstract class AgentMojo extends WhitesourceMojo {
         aggregateProjectName = systemProperties.getProperty(Constants.AGGREGATE_MODULES_PROJECT_NAME, aggregateProjectName);
         aggregateProjectToken = systemProperties.getProperty(Constants.AGGREGATE_MODULES_PROJECT_TOKEN, aggregateProjectToken);
         preserveModuleInfo = Boolean.parseBoolean((systemProperties.getProperty(Constants.PRESERVE_MODULE_INFO, Boolean.toString(preserveModuleInfo))));
+        updateEmptyProject = Boolean.parseBoolean((systemProperties.getProperty(Constants.UPDATE_EMPTY_PROJECT, Boolean.toString(updateEmptyProject))));
+
 
         // ignored scopes
         Set<String> ignoredScopeSet = new HashSet<String>();
