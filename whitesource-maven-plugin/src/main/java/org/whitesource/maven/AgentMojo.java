@@ -202,7 +202,7 @@ public abstract class AgentMojo extends WhitesourceMojo {
     @Parameter(alias = "userKeyFile", property = Constants.ORG_TOKEN_FILE, required = false)
     protected String userKeyFile;
 
-    @Parameter(alias = "updateEmptyProject", property = Constants.UPDATE_EMPTY_PROJECT, required = false)
+    @Parameter(alias = "updateEmptyProject", property = Constants.UPDATE_EMPTY_PROJECT, required = false, defaultValue = "true")
     protected boolean updateEmptyProject;
 
     /* --- Constructors --- */
